@@ -1,0 +1,17 @@
+Shaoxiang Su
+ssx
+
+1. Platform:    Platform: Linux
+                The version: Linux 3.2.0-32-generic-pae i686 (Coming from command uname -mrs)
+
+2. In the folder, there are 13 files:   ltga.h, ltga.cpp -- support code from Lab1
+                                        dhtc.cpp -- support client code
+                                        dhtn.h, dhtn.cpp
+                                        hash.h, hash.cpp
+                                        netimg.h, netimg.cpp
+                                        imgdb.h, imgdb.cpp
+                                        Makefile
+                                        writeup-ssx.txt
+    When typing command make to compile, the execution program is named dhtn and dhtc
+3.  This assignment helps us to understand how DHT is implemented and resources can be distributed
+into separate servers but still remain fast access.

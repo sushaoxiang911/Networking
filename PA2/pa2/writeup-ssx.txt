@@ -1,0 +1,14 @@
+Shaoxiang Su
+ssx
+
+1. Platform:    Platform: Linux
+                The version: Linux 2.6.32-431.el6.x86_64 x86_64 (Coming from command uname -mrs)
+
+2. In the folder, there are 5 files:    ltga.cpp, ltga.h -- support code from Lab1
+                                        P2PSearch.cpp
+                                        Makefile
+                                        writeup-ssx.txt
+    When typing command make to compile, the execution program is named P2PSearch
+3.  This assignment helps to have a better understanding of the mechanism of P2P network.
+    However, I don't think integrating OpenGL is very helpful for the project idea and also it brings some extra difficulties on our programming
+

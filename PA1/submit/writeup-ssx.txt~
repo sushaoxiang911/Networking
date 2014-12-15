@@ -1,0 +1,12 @@
+Shaoxiang Su
+ssx
+
+1. Platform: 	Platform: Linux
+				The version: Linux 2.6.32-431.el6.x86_64 x86_64 (Coming from command uname -mrs)
+
+2. In the folder, there are 5 files: 	ltga.cpp, ltga.h -- support code from Lab1
+										P2PSearch.cpp
+										Makefile
+										writeup-ssx.txt
+	When typing command make to compile, the execution program is named P2PSearch
+	

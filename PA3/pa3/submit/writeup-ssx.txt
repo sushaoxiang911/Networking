@@ -1,0 +1,32 @@
+Shaoxiang Su
+ssx
+
+1.  Platform:   Linux
+                Version: Linux 2.6.32-431.el6.x86_64 x86_64 (Coming from command uname -mrs)
+
+2.  In the folder, there are 10 files:  fec.cpp, fec.h
+                                        imgdb.cpp
+                                        ltga.cpp, ltga.h
+                                        netimg.cpp netimg.h
+                                        netimglut.cpp
+                                        Makefile
+                                        writeup-ssx.txt
+    One issue is that I noticed the refimgdb and refnetimg are modified on 4/4. I just wonder if 
+there is any change on those ones, since I found the NETIMG_VERS is modified to 0x4 instead of 
+the original one 0x3. My imgdb and netimg are connected normally.
+    
+    When imgdb hit the end of the image, It will send a NETIMG_FEC packet to netimg in case that
+it can be used to recover the very last packet. In this case, my server will send the whole fwnd
+window of data with a sequence number beyond the image_size. If the last few packets are not
+enough to fill a FEC window, I would fill it with all zeros. This guarantees that all of my
+NETIMG_FEC packets covers fwnd size of packets, and when the last NETIMG_FEC packet arrives, I
+can easily find out the start offset of the NETIMG_FEC window by the sequence number and recover
+the possible lost packet. 
+
+    I did realize that with go_back_n and fec, these two mechanism, one can have more optimizationon the image sending than what spec required us to do. So in my netimg.cpp code, I leave some
+condition in blank and it is expected that we can write something so that the overall performance
+will be enhanced.
+
+3.  This assignment is very interesting because it remains a huge space for up to think of it. 
+Undoubtedly, we can purely use go_back_n to guarantee that we can receive all the packets in 
+order. However, with the relative data of NETIMG_FEC, we can do more enhancement. 

@@ -1,0 +1,6 @@
+Shaoxiang Su
+ssx
+
+1. Platform:    Linux 2.6.32-431.el6.x86_64 x86_64 (Coming from command uname -mrs)
+
+2. This assignment helps us learn how network is handling congestion, which is very important.
